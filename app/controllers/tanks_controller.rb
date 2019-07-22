@@ -3,6 +3,7 @@ class TanksController < ApplicationController
   end
 
   def show
+    @tank = Tank.find(params[:id])
   end
 
   def new

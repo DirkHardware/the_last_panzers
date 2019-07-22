@@ -1,2 +1,10 @@
 <h1>Tanks#show</h1>
 <p>Find me in app/views/tanks/show.html.erb</p>
+
+<h1><%= @tank.name %></h1>
+<p> Type: <%= @tank.kind %> </p>
+<p> Status: <%= @tank.status_report %> </p>
+
+<% @tank.crewmembers.each do |crew| %>
+    <li><%= crew.name %></li>
+<% end %>

@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/tanks/", to: "tanks#index", as: "tanks"
   get "/tanks/new", to: "tanks#new"
-  get "/tank/:id", to: "tanks#show", as: "tank"
-  get "/tank/:id/edit", to: "tanks#edit"
+  get "/tanks/:id", to: "tanks#show", as: "tank"
+  get "/tanks/:id/edit", to: "tanks#edit"
   post "/tanks/", to: "tanks#create"
   patch "/tanks/:id", to: "tanks#update"
   delete "/tanks/", to: "tanks#delete"

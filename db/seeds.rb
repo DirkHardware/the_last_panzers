@@ -13,8 +13,10 @@
 motorpool = Unit.find(1)
 fstpl = Unit.find(2)
 
-unassigned = Tank.create!(name: "unassigned", kind: "unassigned", crewcount: 100, status: 1, autoloader: false, recon: false, unit: motorpool)
-bittie = Tank.create!(name: "Bittie Mae", kind: "M60 Patton", crewcount: 4, status: 1, autoloader: false, recon: false, unit: fstpl)
+# unassigned = Tank.create!(name: "unassigned", kind: "unassigned", crewcount: 100, status: 1, autoloader: false, recon: false, unit: motorpool)
+# bittie = Tank.create!(name: "Bittie Mae", kind: "M60 Patton", crewcount: 4, status: 1, autoloader: false, recon: false, unit: fstpl)
+
+bittie = Tank.find(3)
 
 brad = Crewmember.create!(name: "Brad Pitt", rank: "Sergeant", tank: bittie)
 adam = Crewmember.create!(name: "Adam Malarky", rank: "Corporal", tank: bittie)
