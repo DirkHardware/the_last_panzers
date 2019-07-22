@@ -4,7 +4,9 @@
     <% @units.all.each do |unit| %>
         <li><%= unit.name %></li>
         <% unit.tanks.each do |tank| %>
-            <ul><%=link_to tank.name, tank_path(tank.id)%></ul>
+            <% if tank.name != "unassigned" %>
+                <ul><%=link_to tank.name, tank_path(tank.id)%></ul>
+            <% end %>
         <% end %>
     <% end %>
 </ul>

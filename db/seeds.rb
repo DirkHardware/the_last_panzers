@@ -16,9 +16,29 @@ fstpl = Unit.find(2)
 # unassigned = Tank.create!(name: "unassigned", kind: "unassigned", crewcount: 100, status: 1, autoloader: false, recon: false, unit: motorpool)
 # bittie = Tank.create!(name: "Bittie Mae", kind: "M60 Patton", crewcount: 4, status: 1, autoloader: false, recon: false, unit: fstpl)
 
-bittie = Tank.find(3)
+# bittie = Tank.find(3)
 
-brad = Crewmember.create!(name: "Brad Pitt", rank: "Sergeant", tank: bittie)
-adam = Crewmember.create!(name: "Adam Malarky", rank: "Corporal", tank: bittie)
-sadiq = Crewmember.create!(name: "Saqid Khan", rank: "Private", tank: bittie)
-harry = Crewmember.create!(name: "Harry Khalet", rank: "Private", tank: bittie)
+# brad = Crewmember.create!(name: "Brad Pitt", rank: 3, tank: bittie)
+# adam = Crewmember.create!(name: "Adam Malarky", rank: 2, tank: bittie)
+# sadiq = Crewmember.create!(name: "Saqid Khan", rank: 1, tank: bittie)
+# harry = Crewmember.create!(name: "Harry Khalet", rank: 1, tank: bittie)
+
+
+
+
+giorgi = Crewmember.find_by name: "Georgi Zhukov"
+giorgi.destroy
+konstantin = Crewmember.find_by name: "Konstantin Rokossovsky"
+konstantin.destroy
+ivan = Crewmember.find_by name: "Ivan Konev"
+ivan.destroy 
+
+suka = Tank.find(4)
+suka.destroy
+
+
+suka = Tank.create!(name: "Suka", kind: "T-72", crewcount: 3, status: 2, autoloader: true, recon: false, unit: motorpool )
+
+giorgi = Crewmember.create!(name: "Georgi Zhukov", rank: 4, tank: suka)
+konstantin = Crewmember.create!(name: "Konstantin Rokossovsky", rank: 3, tank: suka)
+ivan = Crewmember.create!(name: "Ivan Konev", rank: 2, tank: suka)

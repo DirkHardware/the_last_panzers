@@ -1,8 +1,10 @@
 class CrewmembersController < ApplicationController
   def index
+    @crewmembers = Crewmember.all
   end
 
   def show
+    @crewmember = Crewmember.find(params[:id])
   end
 
   def new

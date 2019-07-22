@@ -6,5 +6,5 @@
 <p> Status: <%= @tank.status_report %> </p>
 
 <% @tank.crewmembers.each do |crew| %>
-    <li><%= crew.name %></li>
+    <li><%= link_to crew.name, crewmember_path(crew.id)%></li>
 <% end %>
