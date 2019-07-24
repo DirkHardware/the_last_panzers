@@ -2,3 +2,5 @@
 <p>Find me in app/views/crewmembers/show.html.erb</p>
 
 <h1><%= @crewmember.full_name%></h1>
+<h2> Assigned to: <%=link_to @crewmember.tank.name, tank_path(@crewmember.tank.id)%></h2>
+<%= button_to "Reassign", {action: "edit", id: @crewmember.id}, method: "get" %>

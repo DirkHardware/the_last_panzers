@@ -26,19 +26,25 @@ fstpl = Unit.find(2)
 
 
 
-giorgi = Crewmember.find_by name: "Georgi Zhukov"
-giorgi.destroy
-konstantin = Crewmember.find_by name: "Konstantin Rokossovsky"
-konstantin.destroy
-ivan = Crewmember.find_by name: "Ivan Konev"
-ivan.destroy 
+# giorgi = Crewmember.find_by name: "Georgi Zhukov"
+# giorgi.destroy
+# konstantin = Crewmember.find_by name: "Konstantin Rokossovsky"
+# konstantin.destroy
+# ivan = Crewmember.find_by name: "Ivan Konev"
+# ivan.destroy 
 
-suka = Tank.find(4)
-suka.destroy
+# suka = Tank.find(4)
+# suka.destroy
 
 
-suka = Tank.create!(name: "Suka", kind: "T-72", crewcount: 3, status: 2, autoloader: true, recon: false, unit: motorpool )
+# suka = Tank.create!(name: "Suka", kind: "T-72", crewcount: 3, status: 2, autoloader: true, recon: false, unit: motorpool )
 
-giorgi = Crewmember.create!(name: "Georgi Zhukov", rank: 4, tank: suka)
-konstantin = Crewmember.create!(name: "Konstantin Rokossovsky", rank: 3, tank: suka)
-ivan = Crewmember.create!(name: "Ivan Konev", rank: 2, tank: suka)
+# giorgi = Crewmember.create!(name: "Georgi Zhukov", rank: 4, tank: suka)
+# konstantin = Crewmember.create!(name: "Konstantin Rokossovsky", rank: 3, tank: suka)
+# ivan = Crewmember.create!(name: "Ivan Konev", rank: 2, tank: suka)
+
+billotte = Tank.create!(name: "Bilotte", kind: "AMX-60", crewcount: 3, status: 1, autoloader: true, recon: true, unit: motorpool)
+
+julia = Crewmember.create!(name: "Julia Sternberg", rank: 4, tank: billotte )
+carolin = Crewmember.create!(name: "Carolin Dithrich", rank: 3, tank: billotte )
+

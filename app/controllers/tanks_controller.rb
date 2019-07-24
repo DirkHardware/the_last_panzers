@@ -1,5 +1,7 @@
 class TanksController < ApplicationController
   def index
+    @tanks = Tank.all.select {|tank| tank.name != "unassigned"}
+    @tanks = @tanks.sort_by {|tank| tank.unit.kind}
   end
 
   def show

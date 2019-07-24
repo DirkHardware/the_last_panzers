@@ -1,2 +1,7 @@
 <h1>Crewmembers#edit</h1>
 <p>Find me in app/views/crewmembers/edit.html.erb</p>
+
+<%=form_for @crewmember do |f|%>
+   <%= f.collection_select(:tank_id, @tanks, :id, :name, prompt: "Select Vehicle")%>
+   <%= f.submit "submit" %>
+<%end%>

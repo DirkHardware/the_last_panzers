@@ -1,6 +1,12 @@
 <h1>Crewmembers#index</h1>
 <p>Find me in app/views/crewmembers/index.html.erb</p>
 
-<% @crewmembers.each do |crew| %>
-    <li><%= link_to crew.full_name, crewmember_path(crew.id)%></li>
-<%end%>
+<h1>Assigned</h1>
+    <% @assigned_crew.each do |crew| %>
+        <li><%=link_to crew.full_name, crewmember_path(crew.id)%></li>
+    <% end %>
+
+<h1>Unassigned</h1>
+    <% @unassigned_crew.each do |crew| %>
+        <li><%=link_to crew.full_name, crewmember_path(crew.id)%></li>
+    <% end %>
